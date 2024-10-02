@@ -15,10 +15,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class Main {
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
+        System.out.println("Hello, Docker with Maven!");
     }
 
     @GetMapping("/greet")
     public String greet(){
         return "Hello";
+    }
+    @GetMapping("/")
+    public String entry(){
+        return "<h1>Hello! from Docker for Maven</h1><h3> Welcome to your landing page</h3>";
     }
 }
